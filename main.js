@@ -93,6 +93,106 @@ jQuery('#city').html(templateOras)
     }
     jQuery('#state').html(templateState)
   }
+  function formData(){
+    const formdate= {
+          "first_name":jQuery('#firstname').val(),
+          "last_name":jQuery('#lastname').val(),
+          "phone": sessionStorage.getItem('phoneId')+jQuery('#telefon').val(),
+          "email":jQuery('#email').val(),
+          "address":  jQuery('#address1').val(),
+          "address2":jQuery('#address2').val(),
+          "country": jQuery('#country').val(),
+          "city": jQuery('#city').val(),
+          "state":  jQuery('#state').val(),
+        };
+        const JsonObj=JSON.stringify(formdate)
+      console.log(JsonObj)
+   
+      sessionStorage.setItem('formdata',JsonObj) 
+  validateForm()
+  let dataform=JSON.parse(sessionStorage.getItem('formdata'))
+  if(dataform.first_name!=""&& dataform.last_name!=""&& dataform.phone.length >4 &&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!=""){
+    jQuery("#btnsub").attr('href',"https://alexcampean19.github.io/ddroiddapp/succes.html")
+    jQuery('.alertform').css('display',"none")
+  }
+       };
+       console.log(JSON.parse(sessionStorage.getItem('formdata')))
+       function validateForm() {
+          let fname = document.forms["contactForm"]["firstname"].value;
+          let lname = document.forms["contactForm"]["lastname"].value;
+          let telef = document.forms["contactForm"]["tel"].value;
+          let email = document.forms["contactForm"]["email"].value;
+          let adr = document.forms["contactForm"]["adr1"].value;
+          if (fname == "") {
+          jQuery('#firstname').css("border","1px solid red")
+          jQuery('#erFname').text('First Name is required')
+       
+          }else{
+              jQuery('#firstname').css("border","1px solid #003C55")
+              jQuery("#erFname").css('display',"none")
+           
+          }     if ( lname=="") {
+              jQuery('#lastname').css("border","1px solid red")
+              jQuery('#erLname').text('Last Name is required')
+              jQuery('.alertform').css('display',"inline-block")
+              }else{
+                  jQuery('#lastname').css("border","1px solid #003C55")
+                  jQuery("#erLname").css('display',"none")
+              
+              }
+              if ( telef.length<10) {
+                  jQuery('#telefon').css("border","1px solid red")  
+                        jQuery('#erTel').text('Wrong phone number format')
+                        jQuery('.alertform').css('display',"inline-block")
+                        console.log(telef.length<10)
+                
+                  }else{
+                      jQuery('#telefon').css("border","1px solid #003C55")
+                      jQuery("#erTel").css('display',"none")
+                   
+                  }
+                    if ( email=="") {
+                      jQuery('#email').css("border","1px solid red")
+                      jQuery('#erEmail').text('Email is required')  
+                       jQuery('.alertform').css('display',"inline-block")
+                      }
+                      else{
+                          jQuery('#email').css("border","1px solid #003C55")
+                          jQuery("#erEmail").css('display',"none")
+          
+                      } 
+                       if ( adr=="") {
+                          jQuery('#address1').css("border","1px solid red")
+                          jQuery('#erAddr').text('Address is required')
+                          jQuery('.alertform').css('display',"inline-block")
+                     
+                          }else{
+                              jQuery("#erAddr").css('display',"none")
+                              jQuery('#address1').css("border","1px solid #003C55")
+                      
+                          }
+                          $('#country option').each(function() {
+                              if($(this).is(':selected')){
+                                  jQuery('#erCountry').text('Country is required')
+                                  jQuery('#country').css("border","1px solid red")
+                                  jQuery('.alertform').css('display',"inline-block")
+                              }else{
+                                  jQuery('#country').css("border","1px solid #003C55")
+                                  jQuery("#erCountry").css("display","none")
+                    
+                              }})
+                              $('#city option').each(function() {
+                                  if($(this).is(':selected')){
+                                      jQuery('#city').css("border","1px solid red")
+                                      jQuery('#erCity').text('City is required')
+                                      jQuery('.alertform').css('display',"inline-block")
+                                  }else{
+                                      jQuery('#city').css("border","1px solid #003C55")
+                                      jQuery("#erCity").css("display","none")
+                               
+                                  }})
+                      }
+                      
 function Tari(){
     let templateTara='';
     let url = '';
@@ -119,104 +219,7 @@ function Tari(){
   jQuery('#country').html(templateTara)
     }); 
 
-    function formData(){
-  const formdate= {
-        "first_name":jQuery('#firstname').val(),
-        "last_name":jQuery('#lastname').val(),
-        "phone": sessionStorage.getItem('phoneId')+jQuery('#telefon').val(),
-        "email":jQuery('#email').val(),
-        "address":  jQuery('#address1').val(),
-        "address2":jQuery('#address2').val(),
-        "country": jQuery('#country').val(),
-        "city": jQuery('#city').val(),
-        "state":  jQuery('#state').val(),
-      };
-      const JsonObj=JSON.stringify(formdate)
-    console.log(JsonObj)
  
-    sessionStorage.setItem('formdata',JsonObj) 
-validateForm()
-let dataform=JSON.parse(sessionStorage.getItem('formdata'))
-if(dataform.first_name!=""&& dataform.last_name!=""&&dataform.phone.length >4 &&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!=""){
-  jQuery("#btnsub").attr('href',"https://alexcampean19.github.io/ddroiddapp/succes.html")
-}
-     };
-     console.log(JSON.parse(sessionStorage.getItem('formdata')))
-     function validateForm() {
-        let fname = document.forms["contactForm"]["firstname"].value;
-        let lname = document.forms["contactForm"]["lastname"].value;
-        let telef = document.forms["contactForm"]["tel"].value;
-        let email = document.forms["contactForm"]["email"].value;h
-        let adr = document.forms["contactForm"]["adr1"].value;
-        if (fname == "") {
-        jQuery('#firstname').css("border","1px solid red")
-        jQuery('#erFname').text('First Name is required')
-        jQuery('.alertform').css('display',"inline-block")
-        }else{
-            jQuery('#firstname').css("border","1px solid #003C55")
-            jQuery("#erFname").css('display',"none")
-            jQuery('.alertform').css('display',"none")
-        }     if ( lname=="") {
-            jQuery('#lastname').css("border","1px solid red")
-            jQuery('#erLname').text('Last Name is required')
-            jQuery('.alertform').css('display',"inline-block")
-            }else{
-                jQuery('#lastname').css("border","1px solid #003C55")
-                jQuery("#erLname").css('display',"none")
-                jQuery('.alertform').css('display',"none")
-            }
-            if ( telef.length<10) {
-                jQuery('#telefon').css("border","1px solid red")  
-                      jQuery('#erTel').text('Wrong phone number format')
-                      jQuery('.alertform').css('display',"inline-block")
-              
-                }else{
-                    jQuery('#telefon').css("border","1px solid #003C55")
-                    jQuery("#erTel").css('display',"none")
-                    jQuery('.alertform').css('display',"none")
-                }
-                  if ( email=="") {
-                    jQuery('#email').css("border","1px solid red")
-                    jQuery('#erEmail').text('Email is required')  
-                     jQuery('.alertform').css('display',"inline-block")
-                    }
-                    else{
-                        jQuery('#email').css("border","1px solid #003C55")
-                        jQuery("#erEmail").css('display',"none")
-                        jQuery('.alertform').css('display',"none")
-                    } 
-                     if ( adr=="") {
-                        jQuery('#address1').css("border","1px solid red")
-                        jQuery('#erAddr').text('Address is required')
-                        jQuery('.alertform').css('display',"inline-block")
-                   
-                        }else{
-                            jQuery("#erAddr").css('display',"none")
-                            jQuery('#address1').css("border","1px solid #003C55")
-                            jQuery('.alertform').css('display',"none")
-                        }
-                        $('#country option').each(function() {
-                            if($(this).is(':selected')){
-                                jQuery('#erCountry').text('Country is required')
-                                jQuery('#country').css("border","1px solid red")
-                                jQuery('.alertform').css('display',"inline-block")
-                            }else{
-                                jQuery('#country').css("border","1px solid #003C55")
-                                jQuery("#erCountry").css("display","none")
-                                jQuery('.alertform').css('display',"none")
-                            }})
-                            $('#city option').each(function() {
-                                if($(this).is(':selected')){
-                                    jQuery('#city').css("border","1px solid red")
-                                    jQuery('#erCity').text('City is required')
-                                    jQuery('.alertform').css('display',"inline-block")
-                                }else{
-                                    jQuery('#city').css("border","1px solid #003C55")
-                                    jQuery("#erCity").css("display","none")
-                                    jQuery('.alertform').css('display',"none")
-                                }})
-                    }
-                    
 
 
           return(
