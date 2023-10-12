@@ -15,6 +15,7 @@ header {
         background-color: $buttonJoinColor;
         @include tipografie(16px, 400, 22px, $textColorButton);
         padding: 12px 94px;
-        border-radius: 50px
+        border-radius: 50px;
+        text-decoration: none;
     }
 }

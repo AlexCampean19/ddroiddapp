@@ -25,6 +25,7 @@ header #headerbtn {
   color: #000000;
   padding: 12px 94px;
   border-radius: 50px;
+  text-decoration: none;
 }
 
 footer {

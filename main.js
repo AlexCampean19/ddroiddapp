@@ -138,7 +138,7 @@ function Tari(){
 validateForm()
 let dataform=JSON.parse(sessionStorage.getItem('formdata'))
 if(dataform.first_name!=""&& dataform.last_name!=""&&phone!=""&&email!=""&&address!=""&&country!=""&&city!=""&&state!=""){
-    window.location.href=window.location.origin+'/ddroiddapp/succes.html';
+  jQuery("#btnsub").attr('href',"https://alexcampean19.github.io/ddroiddapp/succes.html")
 }
      };
      console.log(JSON.parse(sessionStorage.getItem('formdata')))
@@ -294,7 +294,7 @@ if(dataform.first_name!=""&& dataform.last_name!=""&&phone!=""&&email!=""&&addre
                     <li id="erCity"></li>
                 </ul>
             </div>
-            <button className="joinus" id="submitbtn"  onClick={formData} >Join Us</button>
+            <a id="btnsub"><button className="joinus" id="submitbtn"  onClick={formData} >Join Us</button></a>
 </div>
 
             </div>
