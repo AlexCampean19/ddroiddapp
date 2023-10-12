@@ -73,6 +73,8 @@ header {
   padding: 28px 94px;
   display: block;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 header a {
   display: inline-block;
@@ -87,7 +89,36 @@ header h1 {
   margin: 0;
 }
 header #headerbtn {
-  display: non;
+  display: none;
+}
+header body {
+  font-family: "Open Sans";
+  margin: 0;
+}
+header .boxOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #F4F5F8;
+  min-height: 850px;
+}
+header .boxOne .summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header .boxOne .summary img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=succes.css.map */
