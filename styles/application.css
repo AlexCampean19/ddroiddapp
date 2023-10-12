@@ -1,0 +1,240 @@
+header {
+  padding: 12px 40px;
+  background-color: #003C55;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+  color: #FFFFFF;
+}
+header img {
+  width: 206px;
+  height: auto;
+}
+header a {
+  text-decoration: none;
+}
+header #headerbtn {
+  background-color: #FCD400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+  padding: 12px 94px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #707070;
+  padding: 20px 0;
+}
+footer h3 {
+  padding-right: 15px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 49px;
+  color: #FFFFFF;
+  margin: 0;
+}
+footer .cookies {
+  border: 0;
+  background-color: transparent;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 36px;
+  font-weight: 900;
+  position: relative;
+}
+footer .cookies:after {
+  content: "\f563";
+  color: #FFFFFF;
+}
+footer .cookies .iconcookies {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans";
+  margin: 0;
+}
+
+header {
+  padding: 28px 94px;
+  display: block;
+  text-align: center;
+}
+header a {
+  display: inline-block;
+  float: left;
+}
+header img {
+  float: left;
+  display: inline-block;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+header #headerbtn {
+  display: non;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 851px;
+}
+main #btnsub {
+  margin-left: auto;
+}
+main #mainbox {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F5F8;
+}
+main .mainbox2 {
+  width: 85%;
+}
+main .formcontent {
+  width: 90%;
+}
+main .formcontent .first,
+main .formcontent .last,
+main .formcontent .date {
+  width: 100%;
+  padding: 3.5px;
+}
+main .formcontent input,
+main .formcontent select {
+  border: 1px solid #003C55;
+}
+main .formcontent .telefon,
+main .formcontent .names,
+main .formcontent .nationaldate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .formcontent option:checked,
+main .formcontent option:hover {
+  background-color: #FFFFFF;
+}
+main .formcontent option {
+  border-bottom: 1px solid #003C55;
+}
+main .formcontent option,
+main .formcontent select {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #003C55;
+  background: white;
+}
+main .formcontent select {
+  background-image: linear-gradient(45deg, transparent 50%, #003C55 50%), linear-gradient(135deg, #003C55 50%, transparent 50%), linear-gradient(to right, #FFFFFF, #003C55);
+  background-position: calc(100% - 13px) calc(1em - 4px), calc(100% - 8px) calc(1em - 4px), calc(100% - 1.5em) -0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 2.3em;
+  background-repeat: no-repeat;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #FFFFFF;
+}
+main .formcontent select div {
+  border: 1px solid #003C55;
+}
+main h2 {
+  text-align: center;
+  padding: 30px 0;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  color: #003C55;
+}
+main .contact {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #003C55;
+}
+main .inputname {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #003C55;
+}
+main .alert {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #FF0000;
+}
+main .joinus {
+  background-color: #FCD400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+  padding: 12px 94px;
+  border-radius: 50px;
+}
+main #lastform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-top: 25px;
+}
+main #submitbtn {
+  height: 47px;
+  margin-left: auto;
+  box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border: none;
+}
+main .alertform {
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: red;
+}
+main .part1input {
+  display: inline-block;
+  width: 45%;
+}
+main .part3input input {
+  width: 100%;
+}
+main .part4input {
+  display: inline-block;
+  width: 30%;
+}
+
+/*# sourceMappingURL=application.css.map */

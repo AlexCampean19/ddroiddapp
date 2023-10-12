@@ -1,0 +1,139 @@
+header {
+  padding: 12px 40px;
+  background-color: #003C55;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+  color: #FFFFFF;
+}
+header img {
+  width: 206px;
+  height: auto;
+}
+header a {
+  text-decoration: none;
+}
+header #headerbtn {
+  background-color: #FCD400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+  padding: 12px 94px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #707070;
+  padding: 20px 0;
+}
+footer h3 {
+  padding-right: 15px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 49px;
+  color: #FFFFFF;
+}
+footer .cookies {
+  border: 0;
+  background-color: transparent;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 36px;
+  font-weight: 900;
+  position: relative;
+}
+footer .cookies:after {
+  content: "\f563";
+  color: #FFFFFF;
+}
+footer .cookies .iconcookies {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans";
+  margin: 0px;
+}
+
+header {
+  padding: 28px 94px;
+  display: block;
+  text-align: center;
+}
+header a {
+  display: inline-block;
+  float: left;
+}
+header img {
+  float: left;
+  display: inline-block;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+header #headerbtn {
+  display: non;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 851px;
+}
+main .boxOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #F4F5F8;
+  min-height: 850px;
+  color: #003C55;
+  padding: 0 150px;
+}
+main .boxOne p {
+  padding-left: 5px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: black;
+}
+main .boxOne h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+  color: #003C55;
+}
+main .boxOne .title {
+  padding-bottom: 30px;
+}
+main .boxOne .suummarytext {
+  display: flex;
+}
+main .boxOne .dateSucces {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+/*# sourceMappingURL=succes.css.map */

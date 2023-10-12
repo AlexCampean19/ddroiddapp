@@ -1,0 +1,33 @@
+@import "culori";
+@import "mixinuri";
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    .boxOne {
+        @include flex(flex, column, space-around, nowrap, center);
+        background-color: $mainBackground;
+        min-height: 850px;
+        .boxTwo {
+            @include flex(flex, row, center, nowrap, center);
+            img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+        }
+        .joinus {
+            background-color: $buttonJoinColor;
+            @include tipografie(16px, 400, 22px, $textColorButton);
+            padding: 12px 94px;
+            border-radius: 50px
+        }
+    }
+}
