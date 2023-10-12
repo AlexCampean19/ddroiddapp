@@ -1,5 +1,9 @@
 @import "culori";
 @import "mixinuri";
+a {
+    text-decoration: none;
+}
+
 main {
     display: flex;
     justify-content: center;

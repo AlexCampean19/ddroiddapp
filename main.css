@@ -1,13 +1,44 @@
-.boxOne {
-  background-color: #F4F5F8;
+a {
+  text-decoration: none;
 }
 
-.boxOne {
+main {
+  display: flex;
+  justify-content: center;
+}
+main .boxOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #F4F5F8;
+  min-height: 850px;
+}
+main .boxOne .boxTwo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
+}
+main .boxOne .boxTwo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+main .boxOne .joinus {
+  background-color: #FCD400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+  padding: 12px 94px;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

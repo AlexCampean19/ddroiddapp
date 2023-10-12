@@ -136,7 +136,10 @@ function Tari(){
  
     sessionStorage.setItem('formdata',JsonObj) 
 validateForm()
-console.log(JSON.parse(sessionStorage.getItem('formdata')))
+let dataform=JSON.parse(sessionStorage.getItem('formdata'))
+if(dataform.first_name!=""&& dataform.last_name!=""&&phone!=""&&email!=""&&address!=""&&country!=""&&city!=""&&state!=""){
+    window.location.href=window.location.origin+'/ddroiddapp/succes.html';
+}
      };
      console.log(JSON.parse(sessionStorage.getItem('formdata')))
      function validateForm() {
