@@ -108,21 +108,22 @@ main .boxOne {
   min-height: 850px;
   color: #003C55;
 }
-main .boxOne .boxTwo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-items: center;
+main .boxOne h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+  color: #003C55;
 }
-main .boxOne .boxTwo img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+main .boxOne .suummarytext {
+  display: flex;
+}
+main .boxOne .suummarytext p {
+  padding-left: 5px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  color: black;
 }
 
 /*# sourceMappingURL=succes.css.map */

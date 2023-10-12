@@ -35,16 +35,15 @@ main {
         background-color: $mainBackground;
         min-height: 850px;
         color: $textColorForm;
-        .boxTwo {
-            @include flex(flex, row, center, nowrap, center);
-            img {
-                width: auto;
-                height: auto;
-                max-width: 100%;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
+        h1 {
+            @include tipografie(48px, 700, 65px, $textColorForm)
+        }
+        .suummarytext {
+            display: flex;
+            p {
+                padding-left: 5px;
+                margin: 0;
+                @include tipografie(20px, 700, 27px, black)
             }
         }
     }
