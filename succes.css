@@ -97,6 +97,7 @@ header body {
 main {
   display: flex;
   justify-content: center;
+  min-height: 851px;
 }
 main .boxOne {
   display: flex;
@@ -123,6 +124,9 @@ main .boxOne h1 {
   color: #003C55;
 }
 main .boxOne .suummarytext {
+  display: flex;
+}
+main .boxOne .suummarytext .dateSucces {
   display: flex;
 }
 

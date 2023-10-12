@@ -30,6 +30,7 @@ header {
 main {
     display: flex;
     justify-content: center;
+    min-height: 851px;
     .boxOne {
         @include flex(flex, column, none, nowrap, center);
         background-color: $mainBackground;
@@ -45,6 +46,9 @@ main {
         }
         .suummarytext {
             display: flex;
+            .dateSucces {
+                display: flex;
+            }
         }
     }
 }
