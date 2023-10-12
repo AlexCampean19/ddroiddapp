@@ -1,16 +1,11 @@
-const tara= (ev)=>{
 
- 
+const tara= (ev)=>{
 getState();
 getPhoneId()
   };
-  
-
-
-  const state=(ev)=>{  console.log(ev.target.value)
-
+  const state=(ev)=>{  
     alegereOras();
-  
+
   }
 
   function getPhoneId(){
@@ -47,12 +42,12 @@ let templateOras='';
             "state":$('#state').find(":selected").text(),
         })
     }).done(function(response) {
-        console.log(response.data)
-        
-  for (let [key, value] of Object.entries(response.data)) {if(value==0){
-    templateOras+='<option value="No city found">No state found</option>'
-    jQuery('#city').html(templateState)
-}else{
+      
+        if(response.data.length==0){
+       
+        templateOras+='<option value="No city found">No city found</option>'
+        jQuery('#city').html(templateOras)  }else{   
+  for (let [key, value] of Object.entries(response.data)) {
     templateOras+='<option value='+value+'>'+value+'</option>'
 }}
 
@@ -78,7 +73,7 @@ jQuery('#city').html(templateOras)
             
         })
     }).done(function(response) {
-  console.log($('#state').find(":selected").val())
+
   for (let [key, value] of Object.entries(response.data)) {
     if(value==0){
         templateState+='<option value="No state found">No state found</option>'
@@ -210,7 +205,7 @@ function Tari(){
   sessionStorage.setItem('tari',JSON.stringify(response.data))
   templateTara+='<option  value="Country">Country</option>'
   for (let [key, value] of Object.entries(response.data)) {
-    templateTara+='<option value='+value.country+'>'+value.country+'</option>'
+    templateTara+='<option class="test" value='+value.country+'>'+value.country+'</option>'
 }
   jQuery('#country').html(templateTara)
     }).fail(function(response) {
@@ -268,7 +263,8 @@ function Tari(){
                         <div className="part2input">
                             <p className="inputname">Country</p>
                             <p className="alert">*</p>
-                        </div><select  required id="country" className="date" type="text"   onChange={tara} ><option value="Country" >Country</option></select></div>
+                        </div><select
+            required id="country" className="date" type="text"   onChange={tara} ><option value="Country" >Country</option></select></div>
                     <div className="part4input">
                         <div className="part2input">
                             <p className="inputname">State </p>
