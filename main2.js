@@ -1,14 +1,16 @@
 const tara= (ev)=>{
-    sessionStorage.setItem('Tara',JSON.stringify(ev.target.value));
-    alegereOras();
+
+ 
 getState();
 getPhoneId()
   };
   
 
 
-  const oras=(ev)=>{
-    sessionStorage.setItem('State',JSON.stringify(ev.target.value));
+  const state=(ev)=>{  console.log(ev.target.value)
+
+    alegereOras();
+  
   }
 
   function getPhoneId(){
@@ -20,7 +22,7 @@ getPhoneId()
         dataType: "json",
         url: url,
         data: JSON.stringify({
-            "country":sessionStorage.getItem('Tara').replace(/['"]+/g, ''),
+            "country":$('#country').find(":selected").text(),
         })
     }).done(function(response) {
   sessionStorage.setItem('phoneId',JSON.stringify(response.data))
@@ -34,21 +36,25 @@ getPhoneId()
   function alegereOras(){
 let templateOras='';
     let url = '';
-    url = 'https://countriesnow.space/api/v0.1/countries/cities'
+    url = 'https://countriesnow.space/api/v0.1/countries/state/cities'
     jQuery.ajax({
         method: "POST",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         url: url,
         data: JSON.stringify({
-            "country":sessionStorage.getItem('Tara').replace(/['"]+/g, ''),
- 
+            "country":$('#country').find(":selected").text(),
+            "state":$('#state').find(":selected").text(),
         })
     }).done(function(response) {
-  sessionStorage.setItem('Oras',JSON.stringify(response.data))
-  for (let [key, value] of Object.entries(response.data)) {
+        console.log(response.data)
+        
+  for (let [key, value] of Object.entries(response.data)) {if(value==0){
+    templateOras+='<option value="No city found">No state found</option>'
+    jQuery('#city').html(templateState)
+}else{
     templateOras+='<option value='+value+'>'+value+'</option>'
-}
+}}
 
 jQuery('#city').html(templateOras)
     }).fail(function(response) {
@@ -61,25 +67,30 @@ jQuery('#city').html(templateOras)
   function getState(){
     let templateState='';
     let url = '';
-    url ='https://countriesnow.space/api/v0.1/countries/state/cities'
+    url ='https://countriesnow.space/api/v0.1/countries/states'
     jQuery.ajax({
         method: "POST",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         url: url,
         data: JSON.stringify({
-            "country":sessionStorage.getItem('Tara').replace(/['"]+/g, ''),
-            "state":sessionStorage.getItem('State').replace(/['"]+/g, ''),
+            "country":$('#country').find(":selected").text()
+            
         })
     }).done(function(response) {
-  
+  console.log($('#state').find(":selected").val())
   for (let [key, value] of Object.entries(response.data)) {
     if(value==0){
         templateState+='<option value="No state found">No state found</option>'
         jQuery('#state').html(templateState)
     }else{
-    sessionStorage.setItem('State',JSON.stringify(value))
-    alegereState()}
+
+        for (let [key, value] of Object.entries(response.data.states)) {
+    
+            templateState+='<option  value='+value.name+'>'+value.name+'</option>'
+          
+        }
+        jQuery('#state').html(templateState)}
 }
     }).fail(function(response) {
         console.log(response)
@@ -88,15 +99,6 @@ jQuery('#city').html(templateOras)
     }); 
   }
 
-  function alegereState(){
-    let templateState='';
-    console.log(JSON.parse(sessionStorage.getItem('State')))
-    for (let [key, value] of Object.entries(JSON.parse(sessionStorage.getItem('State')))) {
-        templateState+='<option  value='+value.name+'>'+value.name+'</option>'
-      
-    }
-    jQuery('#state').html(templateState)
-  }
 
   function formData(){
     const formdate= {
@@ -270,12 +272,12 @@ function Tari(){
                     <div className="part4input">
                         <div className="part2input">
                             <p className="inputname">State </p>
-                        </div><select className="date" type="text" id="state" placeholder="State" ><option  value="State">State</option></select></div>
+                        </div><select className="date" type="text" id="state" placeholder="State" onChange={state}><option  value="State">State</option></select></div>
                     <div className="part4input">
                         <div className="part2input">
                             <p className="inputname">City</p>
                             <p className="alert">*</p>
-                        </div> <select  className="date" type="text" id="city" placeholder="City" onChange={alegereOras} required><option  value="City">City</option></select></div>
+                        </div> <select  className="date" type="text" id="city" placeholder="City" required><option  value="City">City</option></select></div>
                 </div>
 
             </form><div id="lastform">
