@@ -131,8 +131,9 @@ main .boxOne .title {
 main .boxOne .suummarytext {
   display: flex;
 }
-main .boxOne .suummarytext .dateSucces {
+main .boxOne .dateSucces {
   display: flex;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=succes.css.map */

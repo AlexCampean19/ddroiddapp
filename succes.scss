@@ -51,9 +51,10 @@ main {
         }
         .suummarytext {
             display: flex;
-            .dateSucces {
-                display: flex;
-            }
+        }
+        .dateSucces {
+            display: flex;
+            padding-bottom: 10px;
         }
     }
 }
