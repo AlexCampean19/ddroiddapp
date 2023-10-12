@@ -2,6 +2,11 @@
 @import "mixinuri";
 @import "header";
 @import "footer";
+body {
+    font-family: 'Open Sans';
+    margin: 0px;
+}
+
 header {
     padding: 28px 94px;
     display: block;
@@ -20,10 +25,6 @@ header {
     }
     #headerbtn {
         display: non;
-    }
-    body {
-        font-family: 'Open Sans';
-        margin: 0px;
     }
 }
 
