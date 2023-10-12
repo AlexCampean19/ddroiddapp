@@ -144,7 +144,7 @@ jQuery('#city').html(templateOras)
                   jQuery('#telefon').css("border","1px solid red")  
                         jQuery('#erTel').text('Wrong phone number format')
                         jQuery('.alertform').css('display',"inline-block")
-                        console.log(telef.length<10)
+        
                 
                   }else{
                       jQuery('#telefon').css("border","1px solid #003C55")
