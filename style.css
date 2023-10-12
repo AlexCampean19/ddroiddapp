@@ -17,6 +17,9 @@ header img {
   width: 206px;
   height: auto;
 }
+header a {
+  text-decoration: none;
+}
 header #headerbtn {
   background-color: #FCD400;
   font-size: 16px;

@@ -11,6 +11,9 @@ header {
         width: 206px;
         height: auto;
     }
+    a {
+        text-decoration: none;
+    }
     #headerbtn {
         background-color: $buttonJoinColor;
         @include tipografie(16px, 400, 22px, $textColorButton);

@@ -17,6 +17,9 @@ header img {
   width: 206px;
   height: auto;
 }
+header a {
+  text-decoration: none;
+}
 header #headerbtn {
   background-color: #FCD400;
   font-size: 16px;
@@ -25,6 +28,7 @@ header #headerbtn {
   color: #000000;
   padding: 12px 94px;
   border-radius: 50px;
+  text-decoration: none;
 }
 
 footer {
