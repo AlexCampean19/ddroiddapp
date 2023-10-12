@@ -36,6 +36,7 @@ main {
         background-color: $mainBackground;
         min-height: 850px;
         color: $textColorForm;
+        padding: 0 150px;
         p {
             padding-left: 5px;
             margin: 0;
@@ -43,6 +44,9 @@ main {
         }
         h1 {
             @include tipografie(48px, 700, 65px, $textColorForm)
+        }
+        .title {
+            padding-bottom: 30px;
         }
         .suummarytext {
             display: flex;

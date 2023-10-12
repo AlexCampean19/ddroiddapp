@@ -108,6 +108,7 @@ main .boxOne {
   background-color: #F4F5F8;
   min-height: 850px;
   color: #003C55;
+  padding: 0 150px;
 }
 main .boxOne p {
   padding-left: 5px;
@@ -122,6 +123,9 @@ main .boxOne h1 {
   font-weight: 700;
   line-height: 65px;
   color: #003C55;
+}
+main .boxOne .title {
+  padding-bottom: 30px;
 }
 main .boxOne .suummarytext {
   display: flex;
