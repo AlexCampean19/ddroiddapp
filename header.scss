@@ -1,0 +1,20 @@
+@import"culori";
+@import "mixinuri";
+header {
+    padding: 12px 40px;
+    background-color: $headerBackground;
+    @include flex(flex, row, space-between, nowrap, center);
+    h1 {
+        @include tipografie(48px, 400, 65px, $textcolor)
+    }
+    img {
+        width: 206px;
+        height: auto;
+    }
+    #headerbtn {
+        background-color: $buttonJoinColor;
+        @include tipografie(16px, 400, 22px, $textColorButton);
+        padding: 12px 94px;
+        border-radius: 50px
+    }
+}

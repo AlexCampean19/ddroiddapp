@@ -1,0 +1,13 @@
+.boxOne {
+  background-color: #F4F5F8;
+}
+
+.boxOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

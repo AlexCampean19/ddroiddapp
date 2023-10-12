@@ -1,0 +1,24 @@
+@import "culori";
+@import "mixinuri";
+@import "header";
+@import "footer";
+header {
+    padding: 28px 94px;
+    display: block;
+    text-align: center;
+    a {
+        display: inline-block;
+        float: left;
+    }
+    img {
+        float: left;
+        display: inline-block;
+    }
+    h1 {
+        display: inline-block;
+        margin: 0;
+    }
+    #headerbtn {
+        display: non;
+    }
+}
