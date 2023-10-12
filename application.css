@@ -100,6 +100,9 @@ main {
   justify-content: center;
   min-height: 851px;
 }
+main #btnsub {
+  margin-left: auto;
+}
 main #mainbox {
   display: flex;
   flex-direction: column;

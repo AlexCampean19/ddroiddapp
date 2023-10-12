@@ -32,6 +32,9 @@ main {
     display: flex;
     justify-content: center;
     min-height: 851px;
+    #btnsub {
+        margin-left: auto;
+    }
     #mainbox {
         display: flex;
         flex-direction: column;
