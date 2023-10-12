@@ -94,6 +94,10 @@ main {
         select div {
             border: 1px solid $textColorForm;
         }
+        .date-select:hover {
+            background-color: #f0f0f0;
+            /* schimbă culoarea la hover */
+        }
     }
     h2 {
         text-align: center;

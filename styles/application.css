@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   padding: 12px 40px;
   background-color: #003C55;
@@ -165,6 +166,10 @@ main .formcontent select {
 }
 main .formcontent select div {
   border: 1px solid #003C55;
+}
+main .formcontent .date-select:hover {
+  background-color: #f0f0f0;
+  /* schimbă culoarea la hover */
 }
 main h2 {
   text-align: center;

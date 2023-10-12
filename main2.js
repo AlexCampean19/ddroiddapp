@@ -111,7 +111,7 @@ jQuery('#city').html(templateOras)
       sessionStorage.setItem('formdata',JsonObj) 
   validateForm()
   let dataform=JSON.parse(sessionStorage.getItem('formdata'))
-  if(dataform.first_name!=""&& dataform.last_name!=""&& dataform.phone.length >12 &&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!=""){
+  if(dataform.first_name!=""&& dataform.last_name!=""&& dataform.phone.length >12 &&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!="" &&dataform.country!="Country"&&dataform.state!="State"&&dataform.city!="City"){
     jQuery("#btnsub").attr('href',"https://alexcampean19.github.io/ddroiddapp/succes.html")
     jQuery('.alertform').css('display',"none")
   }
@@ -151,7 +151,10 @@ jQuery('#city').html(templateOras)
                       jQuery("#erTel").css('display',"none")
                    
                   }
-                    if ( email=="") {
+                    if (email=="") {
+                    
+                  
+                   
                       jQuery('#email').css("border","1px solid red")
                       jQuery('#erEmail').text('Email is required')  
                        jQuery('.alertform').css('display',"inline-block")
@@ -190,6 +193,7 @@ jQuery('#city').html(templateOras)
                                       jQuery("#erCity").css("display","none")
                                
                                   }})
+                                  
                       }
                       
 function Tari(){
@@ -244,7 +248,7 @@ function Tari(){
                             <div className="part2input">
                                 <p className="inputname">Email address</p>
                                 <p className="alert">*</p>
-                            </div> <input name="email" className="date" type="text" id="email" placeholder="Email Address" required/>
+                            </div> <input   name="email" className="date" type="text" id="email" placeholder="Email Address" required/>
                         </div>
                     </div>
                 </div>

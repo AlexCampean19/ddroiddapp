@@ -5,4 +5,3 @@ import { getCurrentDate } from './exampleModule.js'
 
 
 console.log(`The current date is ${getCurrentDate()}`);
-
