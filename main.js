@@ -137,7 +137,7 @@ function Tari(){
     sessionStorage.setItem('formdata',JsonObj) 
 validateForm()
 let dataform=JSON.parse(sessionStorage.getItem('formdata'))
-if(dataform.first_name!=""&& dataform.last_name!=""&&dataform.phone!=""&&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!=""){
+if(dataform.first_name!=""&& dataform.last_name!=""&&dataform.phone>4&&dataform.email!=""&&dataform.address!=""&&dataform.country!=""&&dataform.city!=""&&dataform.state!=""){
   jQuery("#btnsub").attr('href',"https://alexcampean19.github.io/ddroiddapp/succes.html")
 }
      };
