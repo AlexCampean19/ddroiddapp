@@ -1,47 +1,51 @@
-            @import "culori";
-            @import "mixinuri";
-            @import "header";
-            @import "footer";
-            header {
-                padding: 28px 94px;
-                display: block;
-                text-align: center;
-                a {
-                    display: inline-block;
-                    float: left;
-                }
-                img {
-                    float: left;
-                    display: inline-block;
-                }
-                h1 {
-                    display: inline-block;
-                    margin: 0;
-                }
-                #headerbtn {
-                    display: none;
-                }
-                body {
-                    font-family: 'Open Sans';
-                    margin: 0;
-                }
-                display: flex;
-                justify-content: center;
-                .boxOne {
-                    @include flex(flex, column, space-around, nowrap, center);
-                    background-color: $mainBackground;
-                    min-height: 850px;
-                    .summary {
-                        @include flex(flex, row, center, nowrap, center);
-                        img {
-                            width: auto;
-                            height: auto;
-                            max-width: 100%;
-                            top: 0;
-                            bottom: 0;
-                            right: 0;
-                            left: 0;
-                        }
-                    }
-                }
+@import "culori";
+@import "mixinuri";
+@import "header";
+@import "footer";
+header {
+    padding: 28px 94px;
+    display: block;
+    text-align: center;
+    a {
+        display: inline-block;
+        float: left;
+    }
+    img {
+        float: left;
+        display: inline-block;
+    }
+    h1 {
+        display: inline-block;
+        margin: 0;
+    }
+    #headerbtn {
+        display: non;
+    }
+    body {
+        font-family: 'Open Sans';
+        margin: 0;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    .boxOne {
+        @include flex(flex, column, none, nowrap, center);
+        background-color: $mainBackground;
+        min-height: 850px;
+        color: $textColorForm;
+        .boxTwo {
+            @include flex(flex, row, center, nowrap, center);
+            img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
             }
+        }
+    }
+}
